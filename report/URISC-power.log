@@ -1,0 +1,43 @@
+Loading db file '/login_home/huihaojia/Codes/environment_verify/library/typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : URISC
+Version: T-2022.03-SP5-3
+Date   : Sat Jun 24 06:04:16 2023
+****************************************
+
+
+Library(s) Used:
+
+    typical (File: /login_home/huihaojia/Codes/environment_verify/library/typical.db)
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+URISC                                  9.72e-02    0.980 4.64e+04    1.077 100.0
+  C0 (URISC_Control_Path)              1.35e-02    0.100 5.91e+03    0.114  10.6
+  D0 (URISC_Data_Path)                 7.31e-02    0.864 3.93e+04    0.938  87.1
+    add_1_root_add_91_2 (URISC_Data_Path_DW01_add_1)
+                                       2.68e-02 3.30e-02 1.00e+04 5.98e-02   5.6
+1

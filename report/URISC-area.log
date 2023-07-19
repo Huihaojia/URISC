@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : area
+Design : URISC
+Version: T-2022.03-SP5-3
+Date   : Sat Jun 24 06:04:16 2023
+****************************************
+
+Library(s) Used:
+
+    typical (File: /login_home/huihaojia/Codes/environment_verify/library/typical.db)
+
+Number of ports:                          222
+Number of nets:                           622
+Number of cells:                          457
+Number of combinational cells:            397
+Number of sequential cells:                57
+Number of macros/black boxes:               0
+Number of buf/inv:                        114
+Number of references:                       8
+
+Combinational area:               5441.990484
+Buf/Inv area:                      788.356810
+Noncombinational area:            4058.208046
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  9500.198530
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  --------------------------
+URISC                             9500.1985    100.0   355.9248     0.0000  0.0000  URISC
+C0                                 974.6352     10.3   608.7312   365.9040  0.0000  URISC_Control_Path
+D0                                8169.6385     86.0  2444.9040  3692.3040  0.0000  URISC_Data_Path
+D0/add_1_root_add_91_2            2032.4304     21.4  2032.4304     0.0000  0.0000  URISC_Data_Path_DW01_add_1
+--------------------------------  ---------  -------  ---------  ---------  ------  --------------------------
+Total                                                 5441.9905  4058.2080  0.0000
+
+1

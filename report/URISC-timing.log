@@ -1,0 +1,1474 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 30
+        -max_paths 30
+Design : URISC
+Version: T-2022.03-SP5-3
+Date   : Sat Jun 24 06:04:16 2023
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.61 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.66 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.86 f
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.14       2.00 r
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.19       2.19 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.19 f
+  D0/U39/Y (INVX1)                                                0.07       2.26 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.32 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.32 f
+  data arrival time                                                          2.32
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.32
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.03
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.61 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.66 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.86 f
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.14       2.00 r
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.19       2.19 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.19 f
+  D0/U40/Y (INVX1)                                                0.07       2.26 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.32 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.32 f
+  data arrival time                                                          2.32
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.32
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.03
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.61 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.66 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.86 f
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.14       2.00 r
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.19       2.19 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.19 f
+  D0/U14/Y (INVX1)                                                0.07       2.26 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.32 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.32 f
+  data arrival time                                                          2.32
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.32
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.03
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.61 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.66 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.86 f
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.14       2.00 r
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.19 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.19 f
+  D0/U39/Y (INVX1)                                                0.07       2.26 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.31 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.31 f
+  data arrival time                                                          2.31
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.31
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.04
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.61 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.66 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.86 f
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.14       2.00 r
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.19 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.19 f
+  D0/U40/Y (INVX1)                                                0.07       2.26 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.31 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.31 f
+  data arrival time                                                          2.31
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.31
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.04
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.61 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.66 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.86 f
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.14       2.00 r
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.18       2.19 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.19 f
+  D0/U14/Y (INVX1)                                                0.07       2.26 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.31 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.31 f
+  data arrival time                                                          2.31
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.31
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.04
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.06       1.55 r
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.11       1.66 r
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.05       1.71 f
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.05       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.09       1.85 f
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.14       1.99 r
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.19       2.18 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U39/Y (INVX1)                                                0.07       2.25 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.31 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.31 f
+  data arrival time                                                          2.31
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.31
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.04
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.06       1.55 r
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.11       1.66 r
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.05       1.71 f
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.05       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.09       1.85 f
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.14       1.99 r
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.19       2.18 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U40/Y (INVX1)                                                0.07       2.25 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.31 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.31 f
+  data arrival time                                                          2.31
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.31
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.04
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.06       1.55 r
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.11       1.66 r
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.05       1.71 f
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.05       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.09       1.85 f
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.14       1.99 r
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.19       2.18 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U14/Y (INVX1)                                                0.07       2.25 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.31 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.31 f
+  data arrival time                                                          2.31
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.31
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.04
+
+
+  Startpoint: C0/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[1]/Q (DFFRHQX1)                                  0.37       0.37 r
+  C0/U9/Y (INVX1)                                                 0.08       0.46 f
+  C0/U37/Y (OR2X2)                                                0.15       0.61 f
+  C0/U38/Y (OR2X2)                                                0.13       0.74 f
+  C0/U39/Y (OR2X2)                                                0.15       0.88 f
+  C0/U4/Y (INVX1)                                                 0.06       0.94 r
+  C0/U47/Y (OR2X2)                                                0.10       1.05 r
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.05 r
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.05 r
+  D0/U4/Y (NAND2BX1)                                              0.13       1.18 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.41 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.41 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.53 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.56 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.69 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.77 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.80 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.93 r
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.06       2.00 f
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.18 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U39/Y (INVX1)                                                0.07       2.25 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.30 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.30 f
+  data arrival time                                                          2.30
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.30
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.05
+
+
+  Startpoint: C0/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[1]/Q (DFFRHQX1)                                  0.37       0.37 r
+  C0/U9/Y (INVX1)                                                 0.08       0.46 f
+  C0/U37/Y (OR2X2)                                                0.15       0.61 f
+  C0/U38/Y (OR2X2)                                                0.13       0.74 f
+  C0/U39/Y (OR2X2)                                                0.15       0.88 f
+  C0/U4/Y (INVX1)                                                 0.06       0.94 r
+  C0/U47/Y (OR2X2)                                                0.10       1.05 r
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.05 r
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.05 r
+  D0/U4/Y (NAND2BX1)                                              0.13       1.18 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.41 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.41 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.53 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.56 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.69 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.77 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.80 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.93 r
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.06       2.00 f
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.18 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U40/Y (INVX1)                                                0.07       2.25 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.30 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.30 f
+  data arrival time                                                          2.30
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.30
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.05
+
+
+  Startpoint: C0/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[1]/Q (DFFRHQX1)                                  0.37       0.37 r
+  C0/U9/Y (INVX1)                                                 0.08       0.46 f
+  C0/U37/Y (OR2X2)                                                0.15       0.61 f
+  C0/U38/Y (OR2X2)                                                0.13       0.74 f
+  C0/U39/Y (OR2X2)                                                0.15       0.88 f
+  C0/U4/Y (INVX1)                                                 0.06       0.94 r
+  C0/U47/Y (OR2X2)                                                0.10       1.05 r
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.05 r
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.05 r
+  D0/U4/Y (NAND2BX1)                                              0.13       1.18 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.41 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.41 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.53 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.56 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.69 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.77 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.80 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.93 r
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.06       2.00 f
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.18       2.18 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U14/Y (INVX1)                                                0.07       2.25 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.30 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.30 f
+  data arrival time                                                          2.30
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.30
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.05
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.06       1.55 r
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.11       1.66 r
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.05       1.71 f
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.05       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.09       1.85 f
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.14       1.99 r
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.18 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U39/Y (INVX1)                                                0.07       2.25 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.30 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.30 f
+  data arrival time                                                          2.30
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.30
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.05
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.06       1.55 r
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.11       1.66 r
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.05       1.71 f
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.05       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.09       1.85 f
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.14       1.99 r
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.18 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U40/Y (INVX1)                                                0.07       2.25 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.30 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.30 f
+  data arrival time                                                          2.30
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.30
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.05
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.34 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.34 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.49 f
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.06       1.55 r
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.11       1.66 r
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.05       1.71 f
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.05       1.76 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.09       1.85 f
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.14       1.99 r
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.18       2.18 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.18 f
+  D0/U14/Y (INVX1)                                                0.07       2.25 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.30 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.30 f
+  data arrival time                                                          2.30
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.30
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.05
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U25/Y (INVXL)                                                0.04       0.38 f
+  C0/U10/Y (NOR3X1)                                               0.36       0.75 r
+  C0/U45/Y (OR2X2)                                                0.11       0.86 r
+  C0/U5/Y (OR3X2)                                                 0.09       0.95 r
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.95 r
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.95 r
+  D0/U4/Y (NAND2BX1)                                              0.24       1.19 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.31 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.31 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.46 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.59 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.63 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.74 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.83 f
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.14       1.98 r
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.19       2.17 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.17 f
+  D0/U39/Y (INVX1)                                                0.07       2.24 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U25/Y (INVXL)                                                0.04       0.38 f
+  C0/U10/Y (NOR3X1)                                               0.36       0.75 r
+  C0/U45/Y (OR2X2)                                                0.11       0.86 r
+  C0/U5/Y (OR3X2)                                                 0.09       0.95 r
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.95 r
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.95 r
+  D0/U4/Y (NAND2BX1)                                              0.24       1.19 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.31 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.31 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.46 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.59 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.63 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.74 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.83 f
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.14       1.98 r
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.19       2.17 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.17 f
+  D0/U40/Y (INVX1)                                                0.07       2.24 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[1]/Q (DFFRHQX1)                                  0.37       0.37 r
+  C0/U9/Y (INVX1)                                                 0.08       0.46 f
+  C0/U37/Y (OR2X2)                                                0.15       0.61 f
+  C0/U38/Y (OR2X2)                                                0.13       0.74 f
+  C0/U39/Y (OR2X2)                                                0.15       0.88 f
+  C0/U4/Y (INVX1)                                                 0.06       0.94 r
+  C0/U47/Y (OR2X2)                                                0.10       1.05 r
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.05 r
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.05 r
+  D0/U4/Y (NAND2BX1)                                              0.13       1.18 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.41 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.41 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.53 r
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.07       1.60 f
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.10       1.70 r
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.06       1.76 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.16       1.92 r
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.06       1.99 f
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.17 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.17 f
+  D0/U39/Y (INVX1)                                                0.07       2.24 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[1]/Q (DFFRHQX1)                                  0.37       0.37 r
+  C0/U9/Y (INVX1)                                                 0.08       0.46 f
+  C0/U37/Y (OR2X2)                                                0.15       0.61 f
+  C0/U38/Y (OR2X2)                                                0.13       0.74 f
+  C0/U39/Y (OR2X2)                                                0.15       0.88 f
+  C0/U4/Y (INVX1)                                                 0.06       0.94 r
+  C0/U47/Y (OR2X2)                                                0.10       1.05 r
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.05 r
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.05 r
+  D0/U4/Y (NAND2BX1)                                              0.13       1.18 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.41 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.41 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.53 r
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.07       1.60 f
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.10       1.70 r
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.06       1.76 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.16       1.92 r
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.06       1.99 f
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.17 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.17 f
+  D0/U40/Y (INVX1)                                                0.07       2.24 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U25/Y (INVXL)                                                0.04       0.38 f
+  C0/U10/Y (NOR3X1)                                               0.36       0.75 r
+  C0/U45/Y (OR2X2)                                                0.11       0.86 r
+  C0/U5/Y (OR3X2)                                                 0.09       0.95 r
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.95 r
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.95 r
+  D0/U4/Y (NAND2BX1)                                              0.24       1.19 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.31 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.31 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.46 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.59 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.63 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.74 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.83 f
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.14       1.98 r
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.19       2.17 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.17 f
+  D0/U14/Y (INVX1)                                                0.07       2.24 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[1]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[1]/Q (DFFRHQX1)                                  0.37       0.37 r
+  C0/U9/Y (INVX1)                                                 0.08       0.46 f
+  C0/U37/Y (OR2X2)                                                0.15       0.61 f
+  C0/U38/Y (OR2X2)                                                0.13       0.74 f
+  C0/U39/Y (OR2X2)                                                0.15       0.88 f
+  C0/U4/Y (INVX1)                                                 0.06       0.94 r
+  C0/U47/Y (OR2X2)                                                0.10       1.05 r
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.05 r
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.05 r
+  D0/U4/Y (NAND2BX1)                                              0.13       1.18 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.41 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.41 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.53 r
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.07       1.60 f
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.10       1.70 r
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.06       1.76 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.16       1.92 r
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.06       1.99 f
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U14/Y (INVX1)                                                0.07       2.24 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U41/Y (NOR2X1)                                               0.10       1.11 r
+  D0/U15/Y (CLKINVX3)                                             0.12       1.22 f
+  D0/U35/Y (OAI22X1)                                              0.18       1.40 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.40 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.52 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.55 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.68 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.75 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.78 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.92 r
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.06       1.98 f
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U39/Y (INVX1)                                                0.07       2.24 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U41/Y (NOR2X1)                                               0.10       1.11 r
+  D0/U15/Y (CLKINVX3)                                             0.12       1.22 f
+  D0/U35/Y (OAI22X1)                                              0.18       1.40 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.40 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.52 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.55 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.68 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.75 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.78 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.92 r
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.06       1.98 f
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U40/Y (INVX1)                                                0.07       2.24 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U41/Y (NOR2X1)                                               0.10       1.11 r
+  D0/U15/Y (CLKINVX3)                                             0.12       1.22 f
+  D0/U35/Y (OAI22X1)                                              0.18       1.40 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.40 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.52 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.55 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.68 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.75 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.78 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.92 r
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.06       1.98 f
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U14/Y (INVX1)                                                0.07       2.24 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U6/Y (INVX1)                                                 0.07       0.42 f
+  C0/U30/Y (XOR2X1)                                               0.16       0.58 r
+  C0/U15/Y (NOR3XL)                                               0.06       0.64 f
+  C0/U45/Y (OR2X2)                                                0.15       0.80 f
+  C0/U5/Y (OR3X2)                                                 0.16       0.96 f
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.96 f
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.96 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.16 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.40 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.40 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.51 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.54 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.67 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.75 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.78 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.92 r
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.06       1.98 f
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U39/Y (INVX1)                                                0.07       2.23 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.06
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U6/Y (INVX1)                                                 0.07       0.42 f
+  C0/U30/Y (XOR2X1)                                               0.16       0.58 r
+  C0/U15/Y (NOR3XL)                                               0.06       0.64 f
+  C0/U45/Y (OR2X2)                                                0.15       0.80 f
+  C0/U5/Y (OR3X2)                                                 0.16       0.96 f
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.96 f
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.96 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.16 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.40 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.40 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.51 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.54 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.67 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.75 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.78 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.92 r
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.06       1.98 f
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U40/Y (INVX1)                                                0.07       2.23 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.07
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[5]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U6/Y (INVX1)                                                 0.07       0.42 f
+  C0/U30/Y (XOR2X1)                                               0.16       0.58 r
+  C0/U15/Y (NOR3XL)                                               0.06       0.64 f
+  C0/U45/Y (OR2X2)                                                0.15       0.80 f
+  C0/U5/Y (OR3X2)                                                 0.16       0.96 f
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.96 f
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.96 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.16 f
+  D0/U35/Y (OAI22X1)                                              0.23       1.40 r
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.40 r
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.12       1.51 r
+  D0/add_1_root_add_91_2/U59/Y (NAND2X1)                          0.03       1.54 f
+  D0/add_1_root_add_91_2/U57/Y (NAND3BX1)                         0.13       1.67 f
+  D0/add_1_root_add_91_2/U40/Y (NAND3X1)                          0.07       1.75 r
+  D0/add_1_root_add_91_2/U11/Y (INVX1)                            0.03       1.78 f
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.14       1.92 r
+  D0/add_1_root_add_91_2/U4/Y (AOI21X1)                           0.06       1.98 f
+  D0/add_1_root_add_91_2/U3/Y (XOR2X1)                            0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[5] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U14/Y (INVX1)                                                0.07       2.23 r
+  D0/U60/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[5]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[5]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.07
+
+
+  Startpoint: C0/Counter_reg[3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[7]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[3]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[3]/Q (DFFRHQX1)                                  0.34       0.34 r
+  C0/U42/Y (OR2X2)                                                0.11       0.44 r
+  C0/U43/Y (OR2X2)                                                0.10       0.54 r
+  C0/U29/Y (NOR2X1)                                               0.05       0.59 f
+  C0/U8/Y (OR3XL)                                                 0.27       0.86 f
+  C0/U47/Y (OR2X2)                                                0.15       1.00 f
+  C0/PC_out (URISC_Control_Path)                                  0.00       1.00 f
+  D0/PC_out (URISC_Data_Path)                                     0.00       1.00 f
+  D0/U4/Y (NAND2BX1)                                              0.21       1.22 r
+  D0/U38/Y (OAI22XL)                                              0.11       1.33 f
+  D0/add_1_root_add_91_2/A[5] (URISC_Data_Path_DW01_add_1)        0.00       1.33 f
+  D0/add_1_root_add_91_2/U131/Y (OR2X2)                           0.16       1.49 f
+  D0/add_1_root_add_91_2/U8/Y (INVX1)                             0.07       1.56 r
+  D0/add_1_root_add_91_2/U34/Y (OR2XL)                            0.10       1.65 r
+  D0/add_1_root_add_91_2/U37/Y (NAND2X1)                          0.05       1.70 f
+  D0/add_1_root_add_91_2/U39/Y (AOI21XL)                          0.11       1.81 r
+  D0/add_1_root_add_91_2/U7/Y (OAI21XL)                           0.07       1.88 f
+  D0/add_1_root_add_91_2/U9/Y (NOR2X1)                            0.09       1.97 r
+  D0/add_1_root_add_91_2/U68/Y (XOR2X1)                           0.19       2.16 f
+  D0/add_1_root_add_91_2/SUM[7] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U5/Y (INVX1)                                                 0.07       2.23 r
+  D0/U66/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[7]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[7]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.07
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[8]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U25/Y (INVXL)                                                0.04       0.38 f
+  C0/U10/Y (NOR3X1)                                               0.36       0.75 r
+  C0/U45/Y (OR2X2)                                                0.11       0.86 r
+  C0/U5/Y (OR3X2)                                                 0.09       0.95 r
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.95 r
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.95 r
+  D0/U4/Y (NAND2BX1)                                              0.24       1.19 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.31 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.31 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.46 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.59 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.63 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.74 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.83 f
+  D0/add_1_root_add_91_2/U5/Y (AOI21X1)                           0.14       1.98 r
+  D0/add_1_root_add_91_2/U18/Y (XOR2X1)                           0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[8] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U39/Y (INVX1)                                                0.07       2.23 r
+  D0/U58/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[8]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[8]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.07
+
+
+  Startpoint: C0/Counter_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: D0/MAR_reg_reg[6]
+            (falling edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                           Incr       Path
+  ----------------------------------------------------------------------------------
+  clock clock (rise edge)                                         0.00       0.00
+  clock network delay (ideal)                                     0.00       0.00
+  C0/Counter_reg[0]/CK (DFFRHQX1)                                 0.00       0.00 r
+  C0/Counter_reg[0]/Q (DFFRHQX1)                                  0.35       0.35 r
+  C0/U25/Y (INVXL)                                                0.04       0.38 f
+  C0/U10/Y (NOR3X1)                                               0.36       0.75 r
+  C0/U45/Y (OR2X2)                                                0.11       0.86 r
+  C0/U5/Y (OR3X2)                                                 0.09       0.95 r
+  C0/MDR_out (URISC_Control_Path)                                 0.00       0.95 r
+  D0/MDR_out (URISC_Data_Path)                                    0.00       0.95 r
+  D0/U4/Y (NAND2BX1)                                              0.24       1.19 r
+  D0/U35/Y (OAI22X1)                                              0.12       1.31 f
+  D0/add_1_root_add_91_2/A[1] (URISC_Data_Path_DW01_add_1)        0.00       1.31 f
+  D0/add_1_root_add_91_2/U125/Y (OR2X2)                           0.15       1.46 f
+  D0/add_1_root_add_91_2/U6/Y (INVXL)                             0.12       1.59 r
+  D0/add_1_root_add_91_2/U61/Y (NOR3X1)                           0.04       1.63 f
+  D0/add_1_root_add_91_2/U2/Y (NAND2X1)                           0.10       1.74 r
+  D0/add_1_root_add_91_2/U10/Y (NAND2X1)                          0.10       1.83 f
+  D0/add_1_root_add_91_2/U13/Y (AOI21X1)                          0.14       1.98 r
+  D0/add_1_root_add_91_2/U19/Y (XOR2X1)                           0.18       2.16 f
+  D0/add_1_root_add_91_2/SUM[6] (URISC_Data_Path_DW01_add_1)      0.00       2.16 f
+  D0/U40/Y (INVX1)                                                0.07       2.23 r
+  D0/U59/Y (MXI2X1)                                               0.05       2.29 f
+  D0/MAR_reg_reg[6]/D (DFFNRX1)                                   0.00       2.29 f
+  data arrival time                                                          2.29
+
+  clock clock (fall edge)                                         2.50       2.50
+  clock network delay (ideal)                                     0.00       2.50
+  D0/MAR_reg_reg[6]/CKN (DFFNRX1)                                 0.00       2.50 f
+  library setup time                                             -0.15       2.35
+  data required time                                                         2.35
+  ----------------------------------------------------------------------------------
+  data required time                                                         2.35
+  data arrival time                                                         -2.29
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                                0.07
+
